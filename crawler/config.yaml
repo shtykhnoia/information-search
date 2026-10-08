@@ -1,0 +1,20 @@
+db:
+  uri: mongodb://127.0.0.1:27017
+  name: search_engine
+
+logic:
+  delay_seconds: 1
+  recrawl_seconds: 86400
+  user_agent: MAI-IR-crawler/1.0 (https://github.com/shtykhnoia/information-search)
+
+sources:
+  - name: wikipedia
+    url: https://ru.wikipedia.org
+    categories:
+      - Категория:Фильмы по алфавиту
+      - Категория:Телесериалы по алфавиту
+  - name: wikiquote
+    url: https://ru.wikiquote.org
+    categories:
+      - Категория:Фильмы по алфавиту
+      - Категория:Телесериалы по алфавиту
