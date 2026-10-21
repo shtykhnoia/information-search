@@ -1,0 +1,397 @@
+\documentclass[12pt,a4paper,oneside,fleqn]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\frenchspacing
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage[unicode]{hyperref}
+
+\usepackage{csquotes}
+\DeclareQuoteStyle{russian}
+	{\guillemotleft}{\guillemotright}[0.025em]
+	{\quotedblbase}{\textquotedblleft}
+\ExecuteQuoteOptions{style=russian}
+
+\usepackage{listings}
+
+\oddsidemargin=-0.4mm
+\textwidth=160mm
+\topmargin=4.6mm
+\textheight=210mm
+
+\parindent=0pt
+\parskip=3pt
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\newcommand{\CWHeader}[1]{\section*{#1}}
+
+\lstdefinestyle{custompython}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=Python,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{gray},
+  identifierstyle=\color{black},
+  stringstyle=\color{blue},
+}
+
+\lstdefinestyle{plaintext}{
+  language={},
+  numbers=none,
+  frame=single,
+  basicstyle=\footnotesize\ttfamily,
+  identifierstyle=\color{black},
+  stringstyle=\color{black},
+}
+
+\lstset{
+  tabsize=4,
+  breaklines,
+  columns=fullflexible,
+  flexiblecolumns,
+  numbers=left,
+  numberstyle={\footnotesize},
+  extendedchars=true,
+  style=custompython,
+  literate={а}{{\cyra}}1 {б}{{\cyrb}}1 {в}{{\cyrv}}1 {г}{{\cyrg}}1 {д}{{\cyrd}}1 {е}{{\cyre}}1
+    {ё}{{\cyryo}}1 {ж}{{\cyrzh}}1 {з}{{\cyrz}}1 {и}{{\cyri}}1 {й}{{\cyrishrt}}1 {к}{{\cyrk}}1
+    {л}{{\cyrl}}1 {м}{{\cyrm}}1 {н}{{\cyrn}}1 {о}{{\cyro}}1 {п}{{\cyrp}}1 {р}{{\cyrr}}1
+    {с}{{\cyrs}}1 {т}{{\cyrt}}1 {у}{{\cyru}}1 {ф}{{\cyrf}}1 {х}{{\cyrh}}1 {ц}{{\cyrc}}1
+    {ч}{{\cyrch}}1 {ш}{{\cyrsh}}1 {щ}{{\cyrshch}}1 {ъ}{{\cyrhrdsn}}1 {ы}{{\cyrery}}1 {ь}{{\cyrsftsn}}1
+    {э}{{\cyrerev}}1 {ю}{{\cyryu}}1 {я}{{\cyrya}}1 {А}{{\CYRA}}1 {Б}{{\CYRB}}1 {В}{{\CYRV}}1
+    {Г}{{\CYRG}}1 {Д}{{\CYRD}}1 {Е}{{\CYRE}}1 {Ё}{{\CYRYO}}1 {Ж}{{\CYRZH}}1 {З}{{\CYRZ}}1
+    {И}{{\CYRI}}1 {Й}{{\CYRISHRT}}1 {К}{{\CYRK}}1 {Л}{{\CYRL}}1 {М}{{\CYRM}}1 {Н}{{\CYRN}}1
+    {О}{{\CYRO}}1 {П}{{\CYRP}}1 {Р}{{\CYRR}}1 {С}{{\CYRS}}1 {Т}{{\CYRT}}1 {У}{{\CYRU}}1
+    {Ф}{{\CYRF}}1 {Х}{{\CYRH}}1 {Ц}{{\CYRC}}1 {Ч}{{\CYRCH}}1 {Ш}{{\CYRSH}}1 {Щ}{{\CYRSHCH}}1
+    {Ъ}{{\CYRHRDSN}}1 {Ы}{{\CYRERY}}1 {Ь}{{\CYRSFTSN}}1 {Э}{{\CYREREV}}1 {Ю}{{\CYRYU}}1 {Я}{{\CYRYA}}1
+    {«}{{\guillemotleft}}1 {»}{{\guillemotright}}1 {—}{{\textemdash}}1
+}
+
+% Данные для титульного листа.
+\newcommand{\StudentName}{И.~Мазепа}
+\newcommand{\StudentGroup}{М8О-???Б-??}
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\bfseries
+
+{\Large Московский авиационный институт\\ (национальный исследовательский университет)
+
+}
+
+\vspace{48pt}
+
+{\large Факультет информационных технологий и прикладной математики
+}
+
+\vspace{36pt}
+
+{\large Кафедра вычислительной математики и~программирования
+
+}
+
+\vspace{48pt}
+
+Лабораторная работа \textnumero 1 по курсу \enquote{Информационный поиск}
+
+\end{center}
+
+\vspace{72pt}
+
+\begin{flushright}
+\begin{tabular}{rl}
+Студент: & \StudentName \\
+Преподаватель: & А.\,А. Кухтичев \\
+Группа: & \StudentGroup \\
+Дата: & \\
+Оценка: & \\
+Подпись: & \\
+\end{tabular}
+\end{flushright}
+
+\vfill
+
+\begin{center}
+\bfseries
+Москва, \the\year
+\end{center}
+\end{titlepage}
+
+\pagebreak
+
+\CWHeader{Лабораторная работа \textnumero 1 \enquote{Добыча корпуса документов}}
+
+Необходимо проанализировать корпус документов, который будет использован при выполнении остальных лабораторных работ:
+\begin{itemize}
+    \item Скачать примеры документов к себе на компьютер. В отчёте нужно указать источник данных. Источников в итоговом индексе должно быть не менее двух.
+    \item Ознакомиться с ним, изучить его характеристики. Из чего состоит текст? Есть ли дополнительная мета-информация? Если разметка текста, какая она?
+    \item Выделить текст.
+    \item Найти существующие поисковики, которые уже можно использовать для поиска по выбранному набору документов (встроенный поиск Википедии, поиск Google с использованием ограничений на URL или на сайт).
+    \item Привести несколько примеров запросов к существующим поисковикам, указать недостатки в полученной поисковой выдаче.
+\end{itemize}
+
+В результатах работы должна быть указана статистическая информация о корпусе:
+\begin{itemize}
+    \item размер \enquote{сырых} документов;
+    \item количество документов;
+    \item размер текста, выделенного из \enquote{сырых} данных;
+    \item средний размер документа, средний объём текста в документе.
+\end{itemize}
+
+\pagebreak
+
+\section{Описание}
+
+\subsection{Источники}
+
+Тема корпуса --- фильмы и сериалы. Источники:
+
+\begin{itemize}
+    \item русская Википедия, \url{https://ru.wikipedia.org} --- энциклопедические статьи;
+    \item русский Викицитатник, \url{https://ru.wikiquote.org} --- цитаты и диалоги из фильмов и сериалов.
+\end{itemize}
+
+В корпус входят статьи из категорий \enquote{Фильмы по алфавиту} и \enquote{Телесериалы по алфавиту} обоих сайтов:
+
+\begin{center}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Источник} & \textbf{Документов} \\
+\hline
+Википедия & 43\,337 \\
+Викицитатник & 3\,102 \\
+\hline
+Всего & 46\,439 \\
+\hline
+\end{tabular}
+\end{center}
+
+Документы скачиваются поисковым роботом из лабораторной работы \textnumero 2 и хранятся в MongoDB вместе с адресом, названием источника и временем скачивания.
+
+\subsection{Структура документа}
+
+Документ --- HTML-страница MediaWiki. Кроме самой статьи страница содержит шапку сайта, боковое меню, ссылки на другие языки, подвал, скрипты и стили. Статья находится в блоке \texttt{\#mw-content-text .mw-parser-output}.
+
+Статья Википедии начинается с карточки (\texttt{table.infobox}: режиссёр, в ролях, страна, год) и вводного абзаца. Дальше идут разделы, например \enquote{Сюжет} и \enquote{В ролях}, с заголовками \texttt{h2}/\texttt{h3}, обёрнутые в \texttt{<section>}. В конце --- \enquote{Примечания} (\texttt{.reflist}), \enquote{Ссылки} и навигационные шаблоны (\texttt{.navbox}). В тексте встречаются сноски \texttt{sup.reference}, ссылки \texttt{[править]} у заголовков (\texttt{.mw-editsection}) и знаки ударения в названии: \enquote{Б\'{ы}стрый кур\'{о}к}.
+
+Статья Викицитатника короче: карточка фильма и список цитат в разделе \enquote{Цитаты}. Каждая цитата или диалог --- элемент списка \texttt{li}, реплики начинаются с имени персонажа:
+
+\begin{lstlisting}[style=plaintext]
+— Живой? Лапку подломал? — Десять пробоин, бак вырвало, а у меня — ни царапинки.
+Как говоришь, Маэстро: «Будем жить!»? (Маэстро — комэск-3)
+\end{lstlisting}
+
+\subsection{Метаинформация}
+
+\begin{longtable}{|p{4.6cm}|p{10.4cm}|}
+\hline
+\textbf{Где} & \textbf{Что} \\
+\hline
+\texttt{<title>} & Название статьи и сайта: \enquote{В бой идут одни \enquote{старики} --- Викицитатник}. \\
+\hline
+\texttt{<link rel="canonical">} & Канонический адрес статьи. \\
+\hline
+Объект \texttt{RLCONF} в скрипте & \texttt{wgPageName} --- название, \texttt{wgArticleId} --- идентификатор, \texttt{wgRevisionId} --- номер ревизии, \texttt{wgCategories} --- категории. Среди категорий есть тематические (\enquote{Фильмы СССР}, \enquote{Фильмы о лётчиках}) и служебные (\enquote{Википедия:Статьи без источников}). \\
+\hline
+Блок \texttt{\#catlinks} & Те же категории в виде ссылок внизу страницы. \\
+\hline
+Заголовок \texttt{Last-Modified} & Дата последнего изменения страницы. \\
+\hline
+\end{longtable}
+
+\subsection{Выделение текста}
+
+Из блока статьи удаляются элементы, которые не являются связным текстом: \texttt{script}, \texttt{style}, таблицы (в том числе карточка), изображения с подписями (\texttt{figure}), сноски, ссылки \texttt{[править]}, примечания, навигационные шаблоны и служебные пометки (\texttt{.hatnote}, \texttt{.noprint}). Из оставшегося берётся текст, пробельные символы схлопываются. Пример начала выделенного текста (знаки ударения убраны для печати):
+
+\begin{lstlisting}[style=plaintext]
+«Быстрый курок» ( англ. Trigger Fast ) — фильм в жанре вестерна , снятый по мотивам
+романа «The Ysabel Kid» Джона Эдсона . Сюжет Богатый землевладелец Брент Малик
+отбирает земли у своих бедных соседей.
+\end{lstlisting}
+
+Недостатки выделения, важные для токенизации:
+\begin{itemize}
+    \item элементы склеиваются через пробел, поэтому перед знаками препинания после ссылок появляется лишний пробел: \enquote{вестерна ,};
+    \item заголовки разделов сливаются с текстом: \enquote{Сюжет Богатый землевладелец};
+    \item в тексте остаются знаки ударения;
+    \item вместе с таблицами удаляется карточка фильма, хотя в ней есть полезные данные: режиссёр, актёры, год.
+\end{itemize}
+
+\pagebreak
+
+\section{Статистика корпуса}
+
+Статистика посчитана по случайной выборке из 20 документов каждого источника. Количество документов --- по всему корпусу.
+
+\begin{center}
+\begin{tabular}{|l|r|r|}
+\hline
+ & \textbf{Википедия} & \textbf{Викицитатник} \\
+\hline
+Документов в корпусе & 43\,337 & 3\,102 \\
+Документов в выборке & 20 & 20 \\
+Размер сырых данных выборки & 3\,338~КБ & 1\,576~КБ \\
+Размер текста выборки & 193~КБ & 115~КБ \\
+Средний размер документа & 166,9~КБ & 78,8~КБ \\
+Средний объём текста & 9,6~КБ & 5,7~КБ \\
+Среднее число слов & 847 & 563 \\
+Доля текста в HTML & 5,8\,\% & 7,3\,\% \\
+\hline
+\end{tabular}
+\end{center}
+
+Текст занимает 6--7\,\% HTML, остальное --- разметка, меню, скрипты и стили. Статья Викицитатника примерно вдвое короче статьи Википедии.
+
+Оценка для всего корпуса по средним значениям: около 7,1~ГБ HTML ($43\,337 \times 166{,}9$~КБ $+ 3\,102 \times 78{,}8$~КБ) и около 420~МБ текста ($43\,337 \times 9{,}6$~КБ $+ 3\,102 \times 5{,}7$~КБ).
+
+\pagebreak
+
+\section{Существующие поисковики}
+
+По корпусу можно искать:
+\begin{itemize}
+    \item встроенным поиском Википедии и Викицитатника (страница \enquote{Служебная:Поиск}, API \texttt{list=search});
+    \item поиском Google или Яндекса с ограничением на сайт: \texttt{site:ru.wikipedia.org}, \texttt{site:ru.wikiquote.org}.
+\end{itemize}
+
+Примеры запросов к встроенному поиску (первые пять результатов):
+
+\begin{longtable}{|p{4cm}|p{5.6cm}|p{5.4cm}|}
+\hline
+\textbf{Запрос} & \textbf{Результаты} & \textbf{Недостатки} \\
+\hline
+\enquote{Интерстеллар} (Википедия) & Интерстеллар; Циммер, Ханс; Макконахи, Мэттью; Фой, Маккензи; Деймон, Мэтт & После статьи о фильме идут статьи о людях из съёмочной группы. Поиск не различает фильмы и персоналии. \\
+\hline
+\enquote{фильм про путешествия во времени} (Википедия) & Путешествие во времени; Жена путешественника во времени (фильм); Принц Персии: Пески времени (фильм); Машина времени (фильм, 2002); Патруль времени (фильм, 1994) & Первой идёт общая статья, не фильм. \enquote{Принц Персии} найден по слову \enquote{времени} в названии, а не по сюжету. \\
+\hline
+\enquote{сериал про учителя химии который варит метамфетамин} (Википедия) & Джесси Пинкман; Список персонажей франшизы \enquote{Во все тяжкие}. Подсказка: \enquote{\ldots вахит метамфетамин} & Статьи самого сериала \enquote{Во все тяжкие} нет. Описательный запрос почти ничего не находит. Подсказка \enquote{Возможно, вы имели в виду} заменяет правильное слово \enquote{варит} на имя \enquote{Вахит}. \\
+\hline
+\enquote{Я ещё вернусь} (Викицитатник) & Жюль Верн; Пьер Виктюрньен Верньо; Верное сердце (фильм); Жюль Верн (Жан Верн); Верные враги & Ни одного результата с этой фразой: найдены страницы с похожими словами \enquote{Верн}, \enquote{Верное}. \\
+\hline
+\enquote{Хьюстон, у нас проблемы} (Викицитатник) & Аполлон-13 (фильм); Юлианна Юрьевна Караулова; Образование; Теория Большого взрыва (сериал); Насморк (Лем) & Первый результат верный, остальные не связаны с запросом. \\
+\hline
+\end{longtable}
+
+Общие недостатки: нет ограничения поиска темой фильмов и сериалов, описательные запросы и запросы по сюжету работают плохо, поиск по точной цитате неустойчив.
+
+\pagebreak
+
+\section{Исходный код}
+
+Статистику считает скрипт \texttt{corpus/stats.py}. Он читает конфиг робота, для каждого источника берёт из MongoDB случайную выборку документов (\texttt{\$sample}), выделяет текст функцией \texttt{extract\_text} и выводит размеры. Используется библиотека \texttt{beautifulsoup4}. Запуск:
+
+\begin{lstlisting}[style=plaintext]
+.venv/bin/python corpus/stats.py crawler/config.yaml
+\end{lstlisting}
+
+\begin{lstlisting}
+import argparse
+
+import yaml
+from bs4 import BeautifulSoup
+from pymongo import MongoClient
+
+SAMPLE_SIZE = 20
+NOISE = "script, style, table, figure, sup.reference, .mw-editsection, .reflist, .references, .navbox, .hatnote, .noprint"
+
+
+def extract_text(html):
+    content = BeautifulSoup(html, "html.parser").select_one("#mw-content-text .mw-parser-output")
+    for element in content.select(NOISE):
+        element.decompose()
+    return " ".join(content.get_text(" ").split())
+
+
+def kilobytes(size):
+    return f"{size / 1024:.1f} КБ"
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Статистика корпуса по выборке документов")
+    parser.add_argument("config", help="путь до yaml-конфига робота")
+    args = parser.parse_args()
+    with open(args.config, encoding="utf-8") as file:
+        config = yaml.safe_load(file)
+
+    with MongoClient(config["db"]["uri"]) as mongo:
+        db = mongo[config["db"]["name"]]
+        for source in config["sources"]:
+            name = source["name"]
+            sample = list(db.documents.aggregate([{"$match": {"source": name}}, {"$sample": {"size": SAMPLE_SIZE}}]))
+            html_sizes = [len(document["html"].encode()) for document in sample]
+            texts = [extract_text(document["html"]) for document in sample]
+            text_sizes = [len(text.encode()) for text in texts]
+            words = [len(text.split()) for text in texts]
+
+            print(f"== {name}")
+            print("документов в корпусе:", db.frontier.count_documents({"source": name}))
+            print("документов в выборке:", len(sample))
+            print("сырые данные выборки:", kilobytes(sum(html_sizes)))
+            print("текст выборки:", kilobytes(sum(text_sizes)))
+            print("средний размер документа:", kilobytes(sum(html_sizes) / len(sample)))
+            print("средний объём текста:", kilobytes(sum(text_sizes) / len(sample)), f"({sum(words) // len(sample)} слов)")
+            print(f"доля текста: {sum(text_sizes) / sum(html_sizes):.1%}")
+
+
+if __name__ == "__main__":
+    main()
+\end{lstlisting}
+
+Вывод:
+
+\begin{lstlisting}[style=plaintext]
+== wikipedia
+документов в корпусе: 43337
+документов в выборке: 20
+сырые данные выборки: 3338.2 КБ
+текст выборки: 192.5 КБ
+средний размер документа: 166.9 КБ
+средний объём текста: 9.6 КБ (847 слов)
+доля текста: 5.8%
+== wikiquote
+документов в корпусе: 3102
+документов в выборке: 20
+сырые данные выборки: 1575.7 КБ
+текст выборки: 114.5 КБ
+средний размер документа: 78.8 КБ
+средний объём текста: 5.7 КБ (563 слов)
+доля текста: 7.3%
+\end{lstlisting}
+
+\pagebreak
+
+\section{Выводы}
+
+Я собрал корпус из 46\,439 статей о фильмах и сериалах из Википедии и Викицитатника, изучил структуру страниц MediaWiki и метаинформацию в них, выделил текст и посчитал статистику по выборке. Текст занимает 6--7\,\% HTML, поэтому для индексации нужно хранить или извлекать именно его.
+
+У источников есть рабочий встроенный поиск, но он не ограничен темой корпуса, плохо отвечает на описательные запросы и на запросы-цитаты. Это и предстоит улучшить в собственной поисковой системе.
+
+Недостатки работы: статистика посчитана по выборке из 20 документов на источник, а не по всему корпусу; при выделении текста теряются данные карточки фильма, а заголовки разделов сливаются с текстом.
+
+\pagebreak
+
+\begin{thebibliography}{99}
+\bibitem{manning}
+Маннинг К.\,Д., Рагхаван П., Шютце Х. {\itshape Введение в информационный поиск}. --- М.: Вильямс, 2011. --- 528 с.
+\bibitem{search}
+MediaWiki. {\itshape API:Search}. --- \url{https://www.mediawiki.org/wiki/API:Search}
+\bibitem{bs4}
+{\itshape Beautiful Soup Documentation}. --- \url{https://www.crummy.com/software/BeautifulSoup/bs4/doc/}
+\end{thebibliography}
+
+\end{document}

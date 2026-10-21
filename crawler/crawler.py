@@ -30,6 +30,7 @@ class Crawler:
 
         self.http = requests.Session()
         self.http.headers["User-Agent"] = self.user_agent
+        self.last_response_at = {}
 
         self.documents = db.documents
         self.frontier = db.frontier
@@ -37,18 +38,30 @@ class Crawler:
         self.documents.create_index("url", unique=True)
         self.frontier.create_index("url", unique=True)
         self.frontier.create_index([("next_crawl", 1), ("_id", 1)])
+        self.frontier.create_index([("source", 1), ("next_crawl", 1), ("_id", 1)])
 
     def run(self):
         while True:
             for source in self.sources:
                 self.discover(source)
-            pass_started = time.time()
-            while page := self.frontier.find_one({"next_crawl": {"$lte": pass_started}}, sort=[("next_crawl", 1), ("_id", 1)]):
-                self.crawl(page)
+            self.crawl_due_pages()
             next_page = self.frontier.find_one(sort=[("next_crawl", 1)])
             next_check = next_page["next_crawl"] if next_page else time.time() + self.recrawl_seconds
             log.info("проход завершён, следующая проверка: %s", time.ctime(next_check))
             time.sleep(max(0, next_check - time.time()))
+
+    def crawl_due_pages(self):
+        pass_started = time.time()
+        while pages := self.next_page_of_each_source(pass_started):
+            for page in pages:
+                self.crawl(page)
+
+    def next_page_of_each_source(self, due_by):
+        pages = [
+            self.frontier.find_one({"source": source["name"], "next_crawl": {"$lte": due_by}}, sort=[("next_crawl", 1), ("_id", 1)])
+            for source in self.sources
+        ]
+        return [page for page in pages if page]
 
     def discover(self, source):
         robots = RobotFileParser()
@@ -111,9 +124,11 @@ class Crawler:
         self.frontier.update_one({"_id": page["_id"]}, {"$set": update})
 
     def get(self, url, **kwargs):
+        host = urlsplit(url).netloc
         while True:
-            time.sleep(self.delay_seconds)
+            time.sleep(max(0, self.last_response_at.get(host, 0) + self.delay_seconds - time.monotonic()))
             response = self.http.get(url, timeout=REQUEST_TIMEOUT_SECONDS, **kwargs)
+            self.last_response_at[host] = time.monotonic()
             if response.status_code != 429:
                 break
             retry_after = response.headers.get("Retry-After", "")

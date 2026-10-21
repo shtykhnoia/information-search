@@ -24,6 +24,7 @@ CATEGORY_BATCHES = [["Матрица (фильм)", "Интерстеллар"],
 
 class FakeWiki(BaseHTTPRequestHandler):
     visited = []
+    request_log = []
     last_modified = "Wed, 07 Oct 2026 10:00:00 GMT"
     broken_batch = None
     rate_limited_requests = 0
@@ -31,6 +32,7 @@ class FakeWiki(BaseHTTPRequestHandler):
     def do_GET(self):
         url = urlsplit(self.path)
         FakeWiki.visited.append(unquote(self.path))
+        FakeWiki.request_log.append((self.headers["Host"], time.monotonic()))
         if FakeWiki.rate_limited_requests:
             FakeWiki.rate_limited_requests -= 1
             self.reply(429, "")
@@ -82,6 +84,7 @@ class CrawlerTest(unittest.TestCase):
 
     def setUp(self):
         FakeWiki.visited = []
+        FakeWiki.request_log = []
         FakeWiki.last_modified = "Wed, 07 Oct 2026 10:00:00 GMT"
         FakeWiki.broken_batch = None
         FakeWiki.rate_limited_requests = 0
@@ -157,6 +160,24 @@ class CrawlerTest(unittest.TestCase):
         self.wait_until(lambda: self.db.documents.count_documents({}) == 3)
         FakeWiki.category_batches[1].append("Новый фильм")
         self.wait_until(lambda: self.db.documents.count_documents({}) == 4)
+
+    def test_alternates_sources_while_waiting_for_delay(self):
+        delay = 0.3
+        self.config["logic"]["delay_seconds"] = delay
+        second_host = f"localhost:{self.server.server_port}"
+        self.config["sources"].append({"name": "wikiquote", "url": f"http://{second_host}", "categories": ["Категория:Фильмы"]})
+        crawler = Crawler(self.config, self.db)
+        for source in self.config["sources"]:
+            crawler.discover(source)
+
+        FakeWiki.request_log = []
+        crawler.crawl_due_pages()
+        hosts = [host for host, _ in FakeWiki.request_log]
+        self.assertEqual(hosts, [f"127.0.0.1:{self.server.server_port}", second_host] * 3)
+        for host in set(hosts):
+            times = [moment for request_host, moment in FakeWiki.request_log if request_host == host]
+            self.assertTrue(all(later - earlier >= delay for earlier, later in zip(times, times[1:])))
+        self.assertLess(FakeWiki.request_log[-1][1] - FakeWiki.request_log[0][1], (len(hosts) - 1) * delay)
 
     def test_waits_and_retries_when_rate_limited(self):
         FakeWiki.rate_limited_requests = 2

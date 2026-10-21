@@ -1,0 +1,582 @@
+\documentclass[12pt,a4paper,oneside,fleqn]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\frenchspacing
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage[unicode]{hyperref}
+
+\usepackage{csquotes}
+\DeclareQuoteStyle{russian}
+	{\guillemotleft}{\guillemotright}[0.025em]
+	{\quotedblbase}{\textquotedblleft}
+\ExecuteQuoteOptions{style=russian}
+
+\usepackage{listings}
+
+\oddsidemargin=-0.4mm
+\textwidth=160mm
+\topmargin=4.6mm
+\textheight=210mm
+
+\parindent=0pt
+\parskip=3pt
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\newcommand{\CWHeader}[1]{\section*{#1}}
+
+\lstdefinestyle{custompython}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=Python,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{gray},
+  identifierstyle=\color{black},
+  stringstyle=\color{blue},
+}
+
+\lstdefinestyle{plaintext}{
+  language={},
+  numbers=none,
+  frame=single,
+  basicstyle=\footnotesize\ttfamily,
+  identifierstyle=\color{black},
+  stringstyle=\color{black},
+}
+
+\lstset{
+  tabsize=4,
+  breaklines,
+  columns=fullflexible,
+  flexiblecolumns,
+  numbers=left,
+  numberstyle={\footnotesize},
+  extendedchars=true,
+  style=custompython,
+  literate={а}{{\cyra}}1 {б}{{\cyrb}}1 {в}{{\cyrv}}1 {г}{{\cyrg}}1 {д}{{\cyrd}}1 {е}{{\cyre}}1
+    {ё}{{\cyryo}}1 {ж}{{\cyrzh}}1 {з}{{\cyrz}}1 {и}{{\cyri}}1 {й}{{\cyrishrt}}1 {к}{{\cyrk}}1
+    {л}{{\cyrl}}1 {м}{{\cyrm}}1 {н}{{\cyrn}}1 {о}{{\cyro}}1 {п}{{\cyrp}}1 {р}{{\cyrr}}1
+    {с}{{\cyrs}}1 {т}{{\cyrt}}1 {у}{{\cyru}}1 {ф}{{\cyrf}}1 {х}{{\cyrh}}1 {ц}{{\cyrc}}1
+    {ч}{{\cyrch}}1 {ш}{{\cyrsh}}1 {щ}{{\cyrshch}}1 {ъ}{{\cyrhrdsn}}1 {ы}{{\cyrery}}1 {ь}{{\cyrsftsn}}1
+    {э}{{\cyrerev}}1 {ю}{{\cyryu}}1 {я}{{\cyrya}}1 {А}{{\CYRA}}1 {Б}{{\CYRB}}1 {В}{{\CYRV}}1
+    {Г}{{\CYRG}}1 {Д}{{\CYRD}}1 {Е}{{\CYRE}}1 {Ё}{{\CYRYO}}1 {Ж}{{\CYRZH}}1 {З}{{\CYRZ}}1
+    {И}{{\CYRI}}1 {Й}{{\CYRISHRT}}1 {К}{{\CYRK}}1 {Л}{{\CYRL}}1 {М}{{\CYRM}}1 {Н}{{\CYRN}}1
+    {О}{{\CYRO}}1 {П}{{\CYRP}}1 {Р}{{\CYRR}}1 {С}{{\CYRS}}1 {Т}{{\CYRT}}1 {У}{{\CYRU}}1
+    {Ф}{{\CYRF}}1 {Х}{{\CYRH}}1 {Ц}{{\CYRC}}1 {Ч}{{\CYRCH}}1 {Ш}{{\CYRSH}}1 {Щ}{{\CYRSHCH}}1
+    {Ъ}{{\CYRHRDSN}}1 {Ы}{{\CYRERY}}1 {Ь}{{\CYRSFTSN}}1 {Э}{{\CYREREV}}1 {Ю}{{\CYRYU}}1 {Я}{{\CYRYA}}1
+    {«}{{\guillemotleft}}1 {»}{{\guillemotright}}1 {—}{{\textemdash}}1
+}
+
+% Данные для титульного листа.
+\newcommand{\StudentName}{И.~Мазепа}
+\newcommand{\StudentGroup}{М8О-???Б-??}
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\bfseries
+
+{\Large Московский авиационный институт\\ (национальный исследовательский университет)
+
+}
+
+\vspace{48pt}
+
+{\large Факультет информационных технологий и прикладной математики
+}
+
+\vspace{36pt}
+
+{\large Кафедра вычислительной математики и~программирования
+
+}
+
+\vspace{48pt}
+
+Лабораторная работа \textnumero 2 по курсу \enquote{Информационный поиск}
+
+\end{center}
+
+\vspace{72pt}
+
+\begin{flushright}
+\begin{tabular}{rl}
+Студент: & \StudentName \\
+Преподаватель: & А.\,А. Кухтичев \\
+Группа: & \StudentGroup \\
+Дата: & \\
+Оценка: & \\
+Подпись: & \\
+\end{tabular}
+\end{flushright}
+
+\vfill
+
+\begin{center}
+\bfseries
+Москва, \the\year
+\end{center}
+\end{titlepage}
+
+\pagebreak
+
+\CWHeader{Лабораторная работа \textnumero 2 \enquote{Поисковый робот}}
+
+Необходимо написать поисковый робот --- компонент обкачки документов --- на любом языке программирования.
+
+\begin{itemize}
+    \item Единственным аргументом поисковому роботу подаётся путь до yaml-конфига, содержащий:
+    \begin{itemize}
+        \item данные для базы данных в секции \texttt{db};
+        \item данные для робота в секции \texttt{logic}: задержка между обкачкой страниц;
+        \item любые другие данные, необходимые для реализации логики поискового робота.
+    \end{itemize}
+    \item Сохранять в базе данных (например, MongoDB) документы со следующими полями:
+    \begin{itemize}
+        \item url, нормализованный;
+        \item \enquote{сырой} html-текст документа;
+        \item название источника;
+        \item дата обкачки документа в формате Unix timestamp.
+    \end{itemize}
+    \item Поисковый робот можно остановить в любой момент, и при повторном запуске он должен начать с того документа, на котором остановился.
+    \item Периодически робот должен переобкачивать документы, которые уже есть в базе, но только в том случае, если они изменились.
+\end{itemize}
+
+\pagebreak
+
+\section{Описание}
+
+\subsection{Источники}
+
+Робот скачивает статьи русской Википедии (\url{https://ru.wikipedia.org}) и русского Викицитатника (\url{https://ru.wikiquote.org}) из категорий \enquote{Фильмы по алфавиту} и \enquote{Телесериалы по алфавиту}. Источники и категории задаются в конфиге.
+
+Адреса статей берутся из списков категорий через MediaWiki API, а не из ссылок на скачанных страницах: ссылки со страницы фильма ведут на актёров, города и годы, и обход по ним уходит от темы корпуса.
+
+\subsection{Хранение данных}
+
+Всё состояние робота хранится в MongoDB в трёх коллекциях:
+
+\begin{longtable}{|p{2.6cm}|p{12.4cm}|}
+\hline
+\textbf{Коллекция} & \textbf{Поля} \\
+\hline
+\texttt{documents} & Документы корпуса. \texttt{url} --- нормализованный адрес (уникальный индекс), \texttt{html} --- исходный HTML, \texttt{source} --- название источника, \texttt{crawled\_at} --- время скачивания в Unix timestamp. \\
+\hline
+\texttt{frontier} & Очередь адресов. \texttt{url}, \texttt{source}, \texttt{next\_crawl} --- время, когда страницу нужно обработать (у новой --- 0), \texttt{last\_modified} --- заголовок \texttt{Last-Modified} из последнего ответа. \\
+\hline
+\texttt{categories} & Прогресс обхода категорий. \texttt{\_id} --- \enquote{источник:категория}, \texttt{continue} --- позиция в списке статей, \texttt{done} --- категория пройдена, \texttt{listed\_at} --- время получения последней пачки. \\
+\hline
+\end{longtable}
+
+\subsection{Алгоритм}
+
+Робот работает циклом из проходов. Один проход:
+
+\begin{enumerate}
+    \item Для каждого источника скачать \texttt{robots.txt} и дополнить очередь адресами из категорий.
+    \item Запомнить время начала прохода.
+    \item Пока есть страницы с \texttt{next\_crawl} не позже начала прохода, брать по одной странице каждого источника по кругу и скачивать или перепроверять её. После обработки назначить \texttt{next\_crawl} = текущее время + \texttt{recrawl\_seconds}.
+    \item Заснуть до ближайшего \texttt{next\_crawl}.
+\end{enumerate}
+
+В проход попадают только страницы, срок которых наступил к его началу. Иначе при обходе дольше \texttt{recrawl\_seconds} срок первых страниц наступал бы раньше, чем заканчивался проход, и цикл не завершался бы.
+
+\subsection{Сбор адресов}
+
+Список статей категории запрашивается у \texttt{/w/api.php} с параметрами \texttt{generator=categorymembers}, \texttt{gcmnamespace=0} (только статьи), \texttt{gcmlimit=max} (500 статей за запрос), \texttt{prop=info}, \texttt{inprop=url} (канонический адрес статьи). Ответ, после которого есть ещё статьи, содержит поле \texttt{continue} с позицией для следующего запроса.
+
+После каждой пачки робот добавляет в \texttt{frontier} адреса, разрешённые \texttt{robots.txt}, и сохраняет \texttt{continue} в \texttt{categories}. Адреса добавляются через \texttt{upsert} с \texttt{\$setOnInsert}, поэтому известный адрес не дублируется. Раз в \texttt{recrawl\_seconds} пройденная категория перечисляется заново, чтобы найти новые статьи.
+
+\subsection{Нормализация URL}
+
+Функция \texttt{normalize\_url} переводит схему и домен в нижний регистр, раскодирует и заново кодирует путь, отбрасывает фрагмент после \texttt{\#}. Например, оба адреса ниже приводятся ко второму:
+
+\begin{lstlisting}[style=plaintext]
+https://RU.Wikipedia.org/wiki/Матрица_(фильм)#Сюжет
+https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%29
+\end{lstlisting}
+
+\subsection{Вежливость}
+
+\begin{itemize}
+    \item Адреса, запрещённые в \texttt{robots.txt}, в очередь не попадают.
+    \item Между запросами к одному сайту выдерживается пауза \texttt{delay\_seconds}. Пауза отсчитывается для каждого хоста отдельно, а источники обрабатываются по кругу, поэтому во время паузы одного сайта робот обращается к другому.
+    \item На ответ \texttt{429 Too Many Requests} робот ждёт время из заголовка \texttt{Retry-After} (если его нет --- 60~с) и повторяет запрос.
+    \item В \texttt{User-Agent} указан контакт автора, как требуют правила Wikimedia.
+\end{itemize}
+
+\subsection{Повторная обкачка изменившихся документов}
+
+При скачивании робот сохраняет заголовок \texttt{Last-Modified}, а при перепроверке отправляет его значение в заголовке \texttt{If-Modified-Since}. Если страница не менялась, сервер отвечает \texttt{304 Not Modified} без тела, и документ не перезаписывается. Если менялась --- приходит \texttt{200 OK} с новым HTML, документ и \texttt{crawled\_at} обновляются.
+
+\subsection{Остановка и продолжение}
+
+Очередь и позиции в категориях записываются в MongoDB после каждого шага, поэтому робота можно остановить в любой момент. Страница, которая обрабатывалась в момент остановки, сохраняет старый \texttt{next\_crawl} и при следующем запуске берётся первой. Если остановка пришлась между сохранением документа и обновлением очереди, страница скачается повторно и перезапишет себя: \texttt{url} --- уникальный индекс, дубликата не будет.
+
+\subsection{Обработка ошибок}
+
+\begin{longtable}{|p{5.4cm}|p{9.6cm}|}
+\hline
+\textbf{Ситуация} & \textbf{Поведение} \\
+\hline
+\texttt{429 Too Many Requests} & Ожидание \texttt{Retry-After} и повтор запроса. \\
+\hline
+\texttt{404}, \texttt{5xx} на странице & Запись в лог, страница откладывается до следующей проверки. \\
+\hline
+Обрыв сети, тайм-аут 30~с & Робот завершается; после перезапуска продолжает с той же страницы. \\
+\hline
+\end{longtable}
+
+\subsection{Конфигурация}
+
+\begin{longtable}{|p{4.2cm}|p{10.8cm}|}
+\hline
+\textbf{Поле} & \textbf{Назначение} \\
+\hline
+\texttt{db.uri}, \texttt{db.name} & Подключение к MongoDB и имя базы. \\
+\hline
+\texttt{logic.delay\_seconds} & Пауза между запросами к одному сайту. \\
+\hline
+\texttt{logic.recrawl\_seconds} & Интервал перепроверки страниц и повторного перечисления категорий. \\
+\hline
+\texttt{logic.user\_agent} & Заголовок \texttt{User-Agent}. \\
+\hline
+\texttt{sources} & Источники: название, адрес сайта, категории. \\
+\hline
+\end{longtable}
+
+\pagebreak
+
+\section{Исходный код}
+
+Робот написан на Python 3.12 с библиотеками \texttt{requests}, \texttt{PyYAML} и \texttt{pymongo}. MongoDB запускается в Docker. Запуск:
+
+\begin{lstlisting}[style=plaintext]
+docker compose up -d
+python -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/python crawler/crawler.py crawler/config.yaml
+\end{lstlisting}
+
+\begin{longtable}{|p{4.8cm}|p{10.2cm}|}
+\hline
+\textbf{Функция / метод} & \textbf{Назначение} \\
+\hline
+\texttt{normalize\_url} & Нормализация адреса. \\
+\hline
+\texttt{run} & Цикл проходов. \\
+\hline
+\texttt{crawl\_due\_pages} & Один проход по очереди. \\
+\hline
+\texttt{next\_page\_of\_each\_source} & Ближайшая страница каждого источника. \\
+\hline
+\texttt{discover} & Чтение \texttt{robots.txt} и обход категорий источника. \\
+\hline
+\texttt{discover\_category} & Перечисление категории через API с сохранением позиции. \\
+\hline
+\texttt{crawl} & Скачивание или перепроверка страницы. \\
+\hline
+\texttt{get} & HTTP-запрос с паузой для хоста и обработкой \texttt{429}. \\
+\hline
+\texttt{main} & Чтение конфига, подключение к MongoDB, запуск. \\
+\hline
+\end{longtable}
+
+Конфиг \texttt{crawler/config.yaml}:
+
+\begin{lstlisting}[language={},numbers=none]
+db:
+  uri: mongodb://127.0.0.1:27017
+  name: search_engine
+
+logic:
+  delay_seconds: 1
+  recrawl_seconds: 86400
+  user_agent: MAI-IR-crawler/1.0 (https://github.com/shtykhnoia/information-search)
+
+sources:
+  - name: wikipedia
+    url: https://ru.wikipedia.org
+    categories:
+      - Категория:Фильмы по алфавиту
+      - Категория:Телесериалы по алфавиту
+  - name: wikiquote
+    url: https://ru.wikiquote.org
+    categories:
+      - Категория:Фильмы по алфавиту
+      - Категория:Телесериалы по алфавиту
+\end{lstlisting}
+
+Код \texttt{crawler/crawler.py}:
+
+\begin{lstlisting}
+import argparse
+import logging
+import time
+from urllib.parse import quote, unquote, urlsplit, urlunsplit
+from urllib.robotparser import RobotFileParser
+
+import requests
+import yaml
+from pymongo import MongoClient
+from pymongo.errors import DocumentTooLarge
+
+REQUEST_TIMEOUT_SECONDS = 30
+DEFAULT_RETRY_AFTER_SECONDS = 60
+
+log = logging.getLogger("crawler")
+
+
+def normalize_url(url):
+    scheme, host, path, query, _ = urlsplit(url)
+    return urlunsplit((scheme.lower(), host.lower(), quote(unquote(path)), query, ""))
+
+
+class Crawler:
+    def __init__(self, config, db):
+        logic = config["logic"]
+        self.delay_seconds = logic["delay_seconds"]
+        self.recrawl_seconds = logic["recrawl_seconds"]
+        self.user_agent = logic["user_agent"]
+        self.sources = config["sources"]
+
+        self.http = requests.Session()
+        self.http.headers["User-Agent"] = self.user_agent
+        self.last_response_at = {}
+
+        self.documents = db.documents
+        self.frontier = db.frontier
+        self.categories = db.categories
+        self.documents.create_index("url", unique=True)
+        self.frontier.create_index("url", unique=True)
+        self.frontier.create_index([("next_crawl", 1), ("_id", 1)])
+        self.frontier.create_index([("source", 1), ("next_crawl", 1), ("_id", 1)])
+
+    def run(self):
+        while True:
+            for source in self.sources:
+                self.discover(source)
+            self.crawl_due_pages()
+            next_page = self.frontier.find_one(sort=[("next_crawl", 1)])
+            next_check = next_page["next_crawl"] if next_page else time.time() + self.recrawl_seconds
+            log.info("проход завершён, следующая проверка: %s", time.ctime(next_check))
+            time.sleep(max(0, next_check - time.time()))
+
+    def crawl_due_pages(self):
+        pass_started = time.time()
+        while pages := self.next_page_of_each_source(pass_started):
+            for page in pages:
+                self.crawl(page)
+
+    def next_page_of_each_source(self, due_by):
+        pages = [
+            self.frontier.find_one({"source": source["name"], "next_crawl": {"$lte": due_by}}, sort=[("next_crawl", 1), ("_id", 1)])
+            for source in self.sources
+        ]
+        return [page for page in pages if page]
+
+    def discover(self, source):
+        robots = RobotFileParser()
+        robots.parse(self.get(source["url"] + "/robots.txt").text.splitlines())
+        for category in source["categories"]:
+            self.discover_category(source, category, robots)
+
+    def discover_category(self, source, category, robots):
+        state_id = f"{source['name']}:{category}"
+        state = self.categories.find_one({"_id": state_id})
+        if state is None or (state["done"] and state["listed_at"] + self.recrawl_seconds <= time.time()):
+            state = {"_id": state_id, "continue": {}, "done": False}
+        while not state["done"]:
+            response = self.get(source["url"] + "/w/api.php", params={
+                "action": "query",
+                "format": "json",
+                "formatversion": 2,
+                "generator": "categorymembers",
+                "gcmtitle": category,
+                "gcmnamespace": 0,
+                "gcmlimit": "max",
+                "prop": "info",
+                "inprop": "url",
+                **state["continue"],
+            }).json()
+            pages = response.get("query", {}).get("pages", [])
+            for page in pages:
+                url = normalize_url(page["fullurl"])
+                if robots.can_fetch(self.user_agent, url):
+                    self.frontier.update_one(
+                        {"url": url},
+                        {"$setOnInsert": {"source": source["name"], "next_crawl": 0}},
+                        upsert=True,
+                    )
+            state["continue"] = response.get("continue", {})
+            state["done"] = "continue" not in response
+            state["listed_at"] = int(time.time())
+            self.categories.replace_one({"_id": state_id}, state, upsert=True)
+            log.info("%s: найдено %d страниц", state_id, len(pages))
+
+    def crawl(self, page):
+        url = page["url"]
+        headers = {"If-Modified-Since": page["last_modified"]} if page.get("last_modified") else {}
+        update = {"next_crawl": int(time.time()) + self.recrawl_seconds}
+        try:
+            response = self.get(url, headers=headers)
+            if response.status_code == 304:
+                log.info("не изменилась %s", unquote(url))
+            else:
+                self.documents.replace_one({"url": url}, {
+                    "url": url,
+                    "html": response.text,
+                    "source": page["source"],
+                    "crawled_at": int(time.time()),
+                }, upsert=True)
+                update["last_modified"] = response.headers.get("Last-Modified")
+                log.info("скачана %s", unquote(url))
+        except (requests.HTTPError, DocumentTooLarge) as error:
+            log.warning("ошибка %s: %s", unquote(url), error)
+        self.frontier.update_one({"_id": page["_id"]}, {"$set": update})
+
+    def get(self, url, **kwargs):
+        host = urlsplit(url).netloc
+        while True:
+            time.sleep(max(0, self.last_response_at.get(host, 0) + self.delay_seconds - time.monotonic()))
+            response = self.http.get(url, timeout=REQUEST_TIMEOUT_SECONDS, **kwargs)
+            self.last_response_at[host] = time.monotonic()
+            if response.status_code != 429:
+                break
+            retry_after = response.headers.get("Retry-After", "")
+            wait_seconds = int(retry_after) if retry_after.isdigit() else DEFAULT_RETRY_AFTER_SECONDS
+            log.warning("сервер просит подождать %d с", wait_seconds)
+            time.sleep(wait_seconds)
+        response.raise_for_status()
+        return response
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Поисковый робот")
+    parser.add_argument("config", help="путь до yaml-конфига")
+    args = parser.parse_args()
+    with open(args.config, encoding="utf-8") as file:
+        config = yaml.safe_load(file)
+
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s")
+    with MongoClient(config["db"]["uri"]) as mongo:
+        try:
+            Crawler(config, mongo[config["db"]["name"]]).run()
+        except KeyboardInterrupt:
+            log.info("остановлен")
+
+
+if __name__ == "__main__":
+    main()
+\end{lstlisting}
+
+\pagebreak
+
+\section{Журнал выполнения}
+
+\begin{enumerate}
+    \item \textbf{Определение изменений.} Перед реализацией проверено, что Википедия отдаёт \texttt{Last-Modified} и отвечает \texttt{304} на \texttt{If-Modified-Since}. Поэтому изменения определяются условным запросом, без сравнения содержимого.
+
+    \item \textbf{Ограничение частоты запросов.} При паузе 1~с после 15 запросов к API Википедия ответила \texttt{429 Too Many Requests}. Добавлены ожидание по \texttt{Retry-After} и контакт в \texttt{User-Agent}.
+
+    \item \textbf{Проход дольше интервала перепроверки.} Одна страница обрабатывается около 2~с, и проход по 43 тысячам статей Википедии длится дольше суток (\texttt{recrawl\_seconds}). Чтобы проход завершался, в него включаются только страницы, срок которых наступил к его началу.
+
+    \item \textbf{Новые статьи в категориях.} Пройденная категория не перечислялась повторно, и новые статьи не попадали в очередь. Добавлено повторное перечисление раз в \texttt{recrawl\_seconds}.
+
+    \item \textbf{Простой во время паузы.} Общая пауза на все запросы и очередь, в которой статьи Викицитатника стояли после статей Википедии, не давали обращаться ко второму сайту, пока выдерживается пауза первого. Пауза стала отдельной для каждого хоста, источники обрабатываются по кругу.
+\end{enumerate}
+
+\pagebreak
+
+\section{План тестирования}
+
+Тесты (\texttt{crawler/test\_crawler.py}, \texttt{unittest}) работают с локальным HTTP-сервером, который имитирует MediaWiki: \texttt{robots.txt}, API с категорией из двух пачек, страницы статей, ответы \texttt{304}, \texttt{429}, \texttt{500}. Каждый тест использует временную базу MongoDB. Часть тестов запускает робота как утилиту командной строки в отдельном процессе и принудительно завершает его.
+
+\begin{longtable}{|p{6.8cm}|p{8.2cm}|}
+\hline
+\textbf{Тест} & \textbf{Что проверяет} \\
+\hline
+\texttt{test\_normalize\_url} & Нормализация адресов. \\
+\hline
+\texttt{test\_saves\_documents\_with\_\allowbreak{}required\_fields} & Поля документа. \\
+\hline
+\texttt{test\_skips\_pages\_forbidden\_\allowbreak{}by\_robots} & Соблюдение \texttt{robots.txt}. \\
+\hline
+\texttt{test\_resumes\_category\_listing\_\allowbreak{}after\_failure} & Продолжение обхода категории после сбоя. \\
+\hline
+\texttt{test\_resumes\_crawl\_after\_kill} & Продолжение обкачки после принудительной остановки. \\
+\hline
+\texttt{test\_recrawl\_keeps\_unchanged\_\allowbreak{}page} & Неизменённая страница не перезаписывается. \\
+\hline
+\texttt{test\_recrawl\_updates\_changed\_\allowbreak{}page} & Изменённая страница перезаписывается. \\
+\hline
+\texttt{test\_periodically\_recrawls\_\allowbreak{}changed\_pages} & Периодическая перепроверка работающим роботом. \\
+\hline
+\texttt{test\_finds\_new\_pages\_in\_\allowbreak{}category\_after\_recrawl\_interval} & Поиск новых статей в категории. \\
+\hline
+\texttt{test\_alternates\_sources\_while\_\allowbreak{}waiting\_for\_delay} & Пауза для каждого хоста и чередование источников. \\
+\hline
+\texttt{test\_waits\_and\_retries\_when\_\allowbreak{}rate\_limited} & Ожидание и повтор при \texttt{429}. \\
+\hline
+\end{longtable}
+
+Запуск (нужна MongoDB):
+
+\begin{lstlisting}[style=plaintext]
+.venv/bin/python -m unittest discover crawler -v
+\end{lstlisting}
+
+\pagebreak
+
+\section{Результаты}
+
+Списки категорий дали 46\,439 уникальных адресов. Одна страница с одного сайта обрабатывается примерно за 2~с: 1~с паузы и время ответа. Первый проход по корпусу занимает около суток, и его время определяет Википедия: страницы Викицитатника скачиваются в её паузах.
+
+На реальных сайтах проверены остановка и продолжение: робот, остановленный по Ctrl+C после трёх статей, после перезапуска продолжил с четвёртой без повторов. При принудительной перепроверке Википедия ответила \texttt{304 Not Modified}, документы не перезаписывались.
+
+\pagebreak
+
+\section{Выводы}
+
+Я написал поисковый робот, который собирает статьи о фильмах и сериалах из двух источников, сохраняет их HTML в MongoDB, продолжает работу после остановки и периодически перепроверяет документы условными запросами. Разобрался с устройством очереди адресов, правилами вежливости и \texttt{robots.txt}, нормализацией URL и условными HTTP-запросами.
+
+Недостатки:
+
+\begin{itemize}
+    \item Обходятся только статьи, лежащие непосредственно в категориях, без подкатегорий. Подкатегории можно перечислять запросом с \texttt{gcmtype=subcat}.
+    \item Статья, удалённая с сайта, остаётся в \texttt{documents}. Документ можно удалять при ответе \texttt{404}.
+    \item На одну базу работает один экземпляр робота. Для нескольких нужен атомарный захват страницы из очереди.
+    \item При обрыве сети робот завершается и требует перезапуска. Решается повторами с нарастающей задержкой или запуском как службы.
+    \item Сбор адресов привязан к MediaWiki API. Для других сайтов нужно извлекать ссылки из страниц и читать \texttt{sitemap.xml}.
+\end{itemize}
+
+\pagebreak
+
+\begin{thebibliography}{99}
+\bibitem{manning}
+Маннинг К.\,Д., Рагхаван П., Шютце Х. {\itshape Введение в информационный поиск}. --- М.: Вильямс, 2011. --- 528 с.
+\bibitem{lecture}
+Кухтичев А.\,А. {\itshape Поисковый робот}: лекция курса \enquote{Информационный поиск}. --- МАИ. --- \url{https://github.com/toshunster/MAI-IR}
+\bibitem{categorymembers}
+MediaWiki. {\itshape API:Categorymembers}. --- \url{https://www.mediawiki.org/wiki/API:Categorymembers}
+\bibitem{rfc9110}
+RFC 9110. {\itshape HTTP Semantics}, раздел 13 \enquote{Conditional Requests}. --- \url{https://www.rfc-editor.org/rfc/rfc9110}
+\bibitem{rfc9309}
+RFC 9309. {\itshape Robots Exclusion Protocol}. --- \url{https://www.rfc-editor.org/rfc/rfc9309}
+\end{thebibliography}
+
+\end{document}
