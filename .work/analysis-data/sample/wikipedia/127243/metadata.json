@@ -1,0 +1,17 @@
+{
+  "source": "wikipedia",
+  "url": "https://ru.wikipedia.org/wiki/%D0%91%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D1%80%D1%83%D0%BA%D0%B0",
+  "fetched_url": "https://ru.wikipedia.org/wiki/%D0%91%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D1%80%D1%83%D0%BA%D0%B0",
+  "page_id": 127243,
+  "revision_id": 155445471,
+  "title": "Бриллиантовая рука",
+  "html_title": "Бриллиантовая рука",
+  "crawl_timestamp": 1791230978,
+  "content_type": "text/html; charset=UTF-8",
+  "raw_bytes": 865329,
+  "text_bytes": 139763,
+  "words": 10005,
+  "raw_sha256": "060b928ca84ce8a48ec34170c19e9cc05e480e2345d0669963a265f44c8bbfd6",
+  "text_sha256": "c07b28989939d520f11567c70318b8b76828b6596e2378de745332ad43ede03f",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+}

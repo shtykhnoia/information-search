@@ -1,0 +1,692 @@
+{
+  "timestamp": 1791234004,
+  "documents": [
+    {
+      "source": "wikipedia",
+      "url": "https://ru.wikipedia.org/wiki/%D0%91%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D1%80%D1%83%D0%BA%D0%B0",
+      "fetched_url": "https://ru.wikipedia.org/wiki/%D0%91%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D1%80%D1%83%D0%BA%D0%B0",
+      "page_id": 127243,
+      "revision_id": 155445471,
+      "title": "Бриллиантовая рука",
+      "html_title": "Бриллиантовая рука",
+      "crawl_timestamp": 1791230978,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 865329,
+      "text_bytes": 139763,
+      "words": 10005,
+      "raw_sha256": "060b928ca84ce8a48ec34170c19e9cc05e480e2345d0669963a265f44c8bbfd6",
+      "text_sha256": "c07b28989939d520f11567c70318b8b76828b6596e2378de745332ad43ede03f",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikipedia",
+      "url": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5",
+      "fetched_url": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5",
+      "page_id": 1409156,
+      "revision_id": 154928015,
+      "title": "Во все тяжкие",
+      "html_title": "Во все тяжкие",
+      "crawl_timestamp": 1791230982,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 1181040,
+      "text_bytes": 114075,
+      "words": 9083,
+      "raw_sha256": "9f422040d7793805462e8529a4af7a115a28825091324953fbfb64c16f02b0af",
+      "text_sha256": "25cad95fdcab51373fea0055423d347160e978886d30b46c9e548bfd9f12dc58",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikipedia",
+      "url": "https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D1%80%D0%B0_%D0%BF%D1%80%D0%B5%D1%81%D1%82%D0%BE%D0%BB%D0%BE%D0%B2_(%D1%82%D0%B5%D0%BB%D0%B5%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB)",
+      "fetched_url": "https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D1%80%D0%B0_%D0%BF%D1%80%D0%B5%D1%81%D1%82%D0%BE%D0%BB%D0%BE%D0%B2_(%D1%82%D0%B5%D0%BB%D0%B5%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB)",
+      "page_id": 1943831,
+      "revision_id": 155130570,
+      "title": "Игра престолов (телесериал)",
+      "html_title": "Игра престолов (телесериал)",
+      "crawl_timestamp": 1791230985,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 1190343,
+      "text_bytes": 75210,
+      "words": 6010,
+      "raw_sha256": "260de064ab6b686682c69170bb0ffd4695d721cdf31e516e38d9057b633b9c18",
+      "text_sha256": "1ea49e47ccf914f32d1d551c142b01e924d484130d22e047b2cca4b95f169f33",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikipedia",
+      "url": "https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA_(%D1%82%D0%B5%D0%BB%D0%B5%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB)",
+      "fetched_url": "https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA_(%D1%82%D0%B5%D0%BB%D0%B5%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB)",
+      "page_id": 2663245,
+      "revision_id": 154574624,
+      "title": "Шерлок (телесериал)",
+      "html_title": "Шерлок (телесериал)",
+      "crawl_timestamp": 1791230988,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 1124743,
+      "text_bytes": 110018,
+      "words": 9190,
+      "raw_sha256": "8b6b5e0cd933d583bd493ca29dd9bf9758d11f984b3607dc37ea98ccf3effdfd",
+      "text_sha256": "bdb9f9f82e45c862794db5982d4ecaa379aaaece1cbc3dea28993a7d75aa963d",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikipedia",
+      "url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_(%D1%84%D0%B8%D0%BB%D1%8C%D0%BC)",
+      "fetched_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_(%D1%84%D0%B8%D0%BB%D1%8C%D0%BC)",
+      "page_id": 42958,
+      "revision_id": 155453250,
+      "title": "Матрица (фильм)",
+      "html_title": "Матрица (фильм)",
+      "crawl_timestamp": 1791230973,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 1136810,
+      "text_bytes": 118543,
+      "words": 9128,
+      "raw_sha256": "8f7b15d405bb018f7e0acddb49a8f19ae371bdf04c17b48cdd318d83324eba17",
+      "text_sha256": "5b3ab42edb46d760275c2b039180fff36b0f40df49abc4753363a1b4099a9f40",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikipedia",
+      "url": "https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D1%80",
+      "fetched_url": "https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D1%80",
+      "page_id": 4463106,
+      "revision_id": 155403935,
+      "title": "Интерстеллар",
+      "html_title": "Интерстеллар",
+      "crawl_timestamp": 1791230975,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 608407,
+      "text_bytes": 39120,
+      "words": 3217,
+      "raw_sha256": "176536c28a189f20288da093f8696a72115d3414884e35de8616db4e2b0838d5",
+      "text_sha256": "7f27f200c15dff6d04f49e5874fd61f476bdab9cdb2428fbc470c56e2fc781ad",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikiquote",
+      "url": "https://ru.wikiquote.org/wiki/%D0%91%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D1%80%D1%83%D0%BA%D0%B0",
+      "fetched_url": "https://ru.wikiquote.org/wiki/%D0%91%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D1%80%D1%83%D0%BA%D0%B0",
+      "page_id": 1019,
+      "revision_id": 449415,
+      "title": "Бриллиантовая рука",
+      "html_title": "Бриллиантовая рука",
+      "crawl_timestamp": 1791231005,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 142950,
+      "text_bytes": 31225,
+      "words": 2612,
+      "raw_sha256": "c14fbe102df6b016461783cc76107c7bf5360a34a29e4a899eef3a8f6eb41f68",
+      "text_sha256": "3a8dc8fe7a00108b17f1d1575ea69a72f4397464d2a0401ac6f7e8178789385b",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikiquote",
+      "url": "https://ru.wikiquote.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA",
+      "fetched_url": "https://ru.wikiquote.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA",
+      "page_id": 20619,
+      "revision_id": 437720,
+      "title": "Шерлок",
+      "html_title": "Шерлок",
+      "crawl_timestamp": 1791231011,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 162944,
+      "text_bytes": 29250,
+      "words": 2830,
+      "raw_sha256": "f1b7af241121aae0764a27c3e55ae0b869c95eded310ccd453d0d48133067b41",
+      "text_sha256": "ec1db27af262a1c8f55101b1904f17aac6934709b58d1da7001e4a2a147318de",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikiquote",
+      "url": "https://ru.wikiquote.org/wiki/%D0%98%D0%B3%D1%80%D0%B0_%D0%BF%D1%80%D0%B5%D1%81%D1%82%D0%BE%D0%BB%D0%BE%D0%B2_(%D1%82%D0%B5%D0%BB%D0%B5%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB)",
+      "fetched_url": "https://ru.wikiquote.org/wiki/%D0%98%D0%B3%D1%80%D0%B0_%D0%BF%D1%80%D0%B5%D1%81%D1%82%D0%BE%D0%BB%D0%BE%D0%B2_(%D1%82%D0%B5%D0%BB%D0%B5%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB)",
+      "page_id": 29649,
+      "revision_id": 434026,
+      "title": "Игра престолов (телесериал)",
+      "html_title": "Игра престолов (телесериал)",
+      "crawl_timestamp": 1791231177,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 78246,
+      "text_bytes": 2141,
+      "words": 181,
+      "raw_sha256": "cd9ce401feb449b1bac247a92dcc869140908057cada037f0ea31d1c60b53bed",
+      "text_sha256": "505f0dbaa1782e141cff62047ea73d42de8e53e060faed4167ea74f31c7f8563",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikiquote",
+      "url": "https://ru.wikiquote.org/wiki/%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5",
+      "fetched_url": "https://ru.wikiquote.org/wiki/%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5",
+      "page_id": 34525,
+      "revision_id": 442977,
+      "title": "Во все тяжкие",
+      "html_title": "Во все тяжкие",
+      "crawl_timestamp": 1791231007,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 105933,
+      "text_bytes": 12905,
+      "words": 1227,
+      "raw_sha256": "0f85462c2ffe3555224c7478fcd38edc886ee647e5e976e4a6c3e84f5f59e8a3",
+      "text_sha256": "4722890a3050cdb8651f56ab6a12a03665b2cdbb32e38988b32a8d819fb42ce7",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikiquote",
+      "url": "https://ru.wikiquote.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_(%D1%84%D0%B8%D0%BB%D1%8C%D0%BC)",
+      "fetched_url": "https://ru.wikiquote.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_(%D1%84%D0%B8%D0%BB%D1%8C%D0%BC)",
+      "page_id": 3678,
+      "revision_id": 431195,
+      "title": "Матрица (фильм)",
+      "html_title": "Матрица (фильм)",
+      "crawl_timestamp": 1791231001,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 149721,
+      "text_bytes": 30646,
+      "words": 3763,
+      "raw_sha256": "9a0092f041f37d503850fb7c927f8f31c0544071dbcefd31749a7788e23a8b68",
+      "text_sha256": "cfe49746725ec28bf592640dc3ef6a88bcfb2f94cf892ca97e7ad4f431daf89c",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "source": "wikiquote",
+      "url": "https://ru.wikiquote.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D1%80",
+      "fetched_url": "https://ru.wikiquote.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B5%D0%BB%D0%BB%D0%B0%D1%80",
+      "page_id": 39632,
+      "revision_id": 443542,
+      "title": "Интерстеллар",
+      "html_title": "Интерстеллар",
+      "crawl_timestamp": 1791231003,
+      "content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 102631,
+      "text_bytes": 14091,
+      "words": 1596,
+      "raw_sha256": "46ddcd55759f670a702e85ff1306abcfc9175d98f9967f598d9bf36d0802c10e",
+      "text_sha256": "4037fafb950935ae33b8ce3f7c630757661642d6edf44e57987f13fceb0b8230",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "statistics": {
+    "wikipedia": {
+      "documents": 6,
+      "raw_bytes": 6106672,
+      "text_bytes": 596729,
+      "words": 46633,
+      "average_raw_bytes": 1017778.6666666666,
+      "average_text_bytes": 99454.83333333333,
+      "average_words": 7772.166666666667
+    },
+    "wikiquote": {
+      "documents": 6,
+      "raw_bytes": 742425,
+      "text_bytes": 120258,
+      "words": 12209,
+      "average_raw_bytes": 123737.5,
+      "average_text_bytes": 20043.0,
+      "average_words": 2034.8333333333333
+    },
+    "total": {
+      "documents": 12,
+      "raw_bytes": 6849097,
+      "text_bytes": 716987,
+      "words": 58842,
+      "average_raw_bytes": 570758.0833333334,
+      "average_text_bytes": 59748.916666666664,
+      "average_words": 4903.5
+    }
+  },
+  "categories": [
+    {
+      "source": "wikipedia",
+      "category": "Категория:Фильмы по алфавиту",
+      "size": 38151,
+      "pages": 38149,
+      "files": 0,
+      "subcats": 2,
+      "hidden": false
+    },
+    {
+      "source": "wikipedia",
+      "category": "Категория:Телесериалы по алфавиту",
+      "size": 5150,
+      "pages": 5149,
+      "files": 0,
+      "subcats": 1,
+      "hidden": false
+    },
+    {
+      "source": "wikiquote",
+      "category": "Категория:Фильмы по алфавиту",
+      "size": 2843,
+      "pages": 2842,
+      "files": 0,
+      "subcats": 1,
+      "hidden": false
+    },
+    {
+      "source": "wikiquote",
+      "category": "Категория:Телесериалы по алфавиту",
+      "size": 260,
+      "pages": 254,
+      "files": 0,
+      "subcats": 6,
+      "hidden": false
+    }
+  ],
+  "search": [
+    {
+      "source": "wikipedia",
+      "query": "Матрица красная таблетка",
+      "target": "Матрица (фильм)",
+      "results": [
+        {
+          "ns": 0,
+          "title": "Красная и синяя таблетки",
+          "pageid": 6618602,
+          "wordcount": 478,
+          "snippet": "<span class=\"searchmatch\">Красная</span> <span class=\"searchmatch\">таблетка</span> и её противоположность, синяя <span class=\"searchmatch\">таблетка</span> — популярные символы выбора между мучительной правдой реальности (<span class=\"searchmatch\">красная</span> <span class=\"searchmatch\">таблетка</span>) и блаженной",
+          "timestamp": "2026-01-24T02:28:40Z"
+        },
+        {
+          "ns": 0,
+          "title": "Инцелы",
+          "pageid": 550814,
+          "wordcount": 3421,
+          "snippet": "он есть на самом деле (принять <span class=\"searchmatch\">красную</span> <span class=\"searchmatch\">таблетку</span>). Среди сообществ, которые используют этот термин, «<span class=\"searchmatch\">красная</span> <span class=\"searchmatch\">таблетка</span>» обычно обозначает основной набор",
+          "timestamp": "2026-10-03T10:09:50Z"
+        },
+        {
+          "ns": 0,
+          "title": "Таблетка",
+          "pageid": 20778,
+          "wordcount": 5230,
+          "snippet": "<span class=\"searchmatch\">Табле́тка</span> (лат. Tabulettae) — твёрдая дозированная лекарственная форма, получаемая прессованием порошков и гранул, содержащих одно или более лекарственных",
+          "timestamp": "2026-07-13T12:52:36Z"
+        },
+        {
+          "ns": 0,
+          "title": "Красная таблетка",
+          "pageid": 8777648,
+          "wordcount": 92,
+          "snippet": "<span class=\"searchmatch\">Красная</span> <span class=\"searchmatch\">таблетка</span> (англ. red pill) может означать: <span class=\"searchmatch\">Красная</span> и синяя <span class=\"searchmatch\">таблетки</span> — метафора из фильма «<span class=\"searchmatch\">Матрица</span>», выбор между мучительной правдой реальности (красная",
+          "timestamp": "2021-04-08T16:48:44Z"
+        },
+        {
+          "ns": 0,
+          "title": "Матрица (фильм)",
+          "pageid": 42958,
+          "wordcount": 14667,
+          "snippet": "«Комиксы <span class=\"searchmatch\">Матрицы</span>, том 1» и «том 2». «<span class=\"searchmatch\">Матрица</span>», пожалуй, является самым выдающимся произведением в жанре киберпанка. — Уильям Гибсон «<span class=\"searchmatch\">Матрица</span>» опирается",
+          "timestamp": "2026-10-05T19:16:14Z"
+        },
+        {
+          "ns": 0,
+          "title": "Синяя таблетка",
+          "pageid": 8777690,
+          "wordcount": 83,
+          "snippet": "Синяя <span class=\"searchmatch\">таблетка</span> (англ. blue pill) может означать: <span class=\"searchmatch\">Красная</span> и синяя <span class=\"searchmatch\">таблетки</span> — метафора из фильма «<span class=\"searchmatch\">Матрица</span>», выбор между мучительной правдой реальности (красная",
+          "timestamp": "2021-04-08T16:50:02Z"
+        },
+        {
+          "ns": 0,
+          "title": "Матрица (франшиза)",
+          "pageid": 3237354,
+          "wordcount": 1707,
+          "snippet": "«<span class=\"searchmatch\">Ма́трица</span>» (англ. The Matrix) — американская научно-фантастическая медиафраншиза в жанре киберпанк. Началась с фильма 1999 года «<span class=\"searchmatch\">Матрица</span>», написанного",
+          "timestamp": "2026-09-13T05:08:09Z"
+        },
+        {
+          "ns": 0,
+          "title": "Маносфера",
+          "pageid": 8466916,
+          "wordcount": 2143,
+          "snippet": "центральных понятий маносферы является метафора <span class=\"searchmatch\">красной</span> и синей таблеток из фильма «<span class=\"searchmatch\">Матрица</span>»: <span class=\"searchmatch\">красная</span> <span class=\"searchmatch\">таблетка</span> — это «пробуждение» от феминистической «иллюзии»",
+          "timestamp": "2026-09-12T18:48:57Z"
+        },
+        {
+          "ns": 0,
+          "title": "Красная таблетка (фильм)",
+          "pageid": 6718779,
+          "wordcount": 837,
+          "snippet": "фильма состоялась в октябре 2016 года. Термин «<span class=\"searchmatch\">красная</span> <span class=\"searchmatch\">таблетка</span>» — метафорическая отсылка к фильму «<span class=\"searchmatch\">Матрица</span>», где главному герою необходимо сделать выбор",
+          "timestamp": "2025-07-16T11:58:45Z"
+        },
+        {
+          "ns": 0,
+          "title": "Матрица: Воскрешение",
+          "pageid": 8097750,
+          "wordcount": 3763,
+          "snippet": "«<span class=\"searchmatch\">Матрица</span>: Воскрешение» (англ. The Matrix Resurrections) — американский научно-фантастический боевик, четвёртая часть франшизы «<span class=\"searchmatch\">Матрица</span>». Продолжение фильма",
+          "timestamp": "2026-09-09T07:33:40Z"
+        }
+      ],
+      "urls": [
+        "https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_%D0%B8_%D1%81%D0%B8%D0%BD%D1%8F%D1%8F_%D1%82%D0%B0%D0%B1%D0%BB%D0%B5%D1%82%D0%BA%D0%B8",
+        "https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%86%D0%B5%D0%BB%D1%8B",
+        "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B5%D1%82%D0%BA%D0%B0",
+        "https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_%D1%82%D0%B0%D0%B1%D0%BB%D0%B5%D1%82%D0%BA%D0%B0",
+        "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_(%D1%84%D0%B8%D0%BB%D1%8C%D0%BC)",
+        "https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BD%D1%8F%D1%8F_%D1%82%D0%B0%D0%B1%D0%BB%D0%B5%D1%82%D0%BA%D0%B0",
+        "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_(%D1%84%D1%80%D0%B0%D0%BD%D1%88%D0%B8%D0%B7%D0%B0)",
+        "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D0%BE%D1%81%D1%84%D0%B5%D1%80%D0%B0",
+        "https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_%D1%82%D0%B0%D0%B1%D0%BB%D0%B5%D1%82%D0%BA%D0%B0_(%D1%84%D0%B8%D0%BB%D1%8C%D0%BC)",
+        "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0:_%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5"
+      ]
+    },
+    {
+      "source": "wikiquote",
+      "query": "\"ложки не существует\"",
+      "target": "Матрица (фильм)",
+      "results": [
+        {
+          "ns": 0,
+          "title": "Матрица (фильм)",
+          "pageid": 3678,
+          "wordcount": 77,
+          "snippet": "Вместо этого, попытайся понять главное. Нео: Что — главное? Мальчик: <span class=\"searchmatch\">Ложки</span> <span class=\"searchmatch\">не</span> <span class=\"searchmatch\">существует</span>. Нео: Не существует? Мальчик: Знаешь, это не ложка гнётся, всё обман",
+          "timestamp": "2025-09-28T07:53:47Z"
+        }
+      ],
+      "urls": [
+        "https://ru.wikiquote.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_(%D1%84%D0%B8%D0%BB%D1%8C%D0%BC)"
+      ]
+    },
+    {
+      "source": "wikipedia",
+      "query": "\"Во все тяжкие\" Уолтер",
+      "target": "Во все тяжкие",
+      "results": [
+        {
+          "ns": 0,
+          "title": "Во все тяжкие (3-й сезон)",
+          "pageid": 4658681,
+          "wordcount": 372,
+          "snippet": "Премьера третьего сезона американской телевизионной драмы «<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>» состоялась 21 марта 2010. Показ новых эпизодов продолжался до 13 июня 2010.",
+          "timestamp": "2026-08-14T19:44:09Z"
+        },
+        {
+          "ns": 0,
+          "title": "Во все тяжкие",
+          "pageid": 1409156,
+          "wordcount": 12944,
+          "snippet": "«<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>» (англ. Breaking Bad) — американская телевизионная криминальная драма, премьерные серии которой транслировались с 20 января 2008 года по",
+          "timestamp": "2026-09-09T16:57:31Z"
+        },
+        {
+          "ns": 0,
+          "title": "Во все тяжкие (4-й сезон)",
+          "pageid": 4685631,
+          "wordcount": 671,
+          "snippet": "Премьера четвёртого сезона американского телевизионного сериала «<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>» состоялась 17 июля 2011 года. Показ новых эпизодов продолжался до 9 октября",
+          "timestamp": "2025-07-31T18:16:15Z"
+        },
+        {
+          "ns": 0,
+          "title": "Во все тяжкие (1-й сезон)",
+          "pageid": 3359770,
+          "wordcount": 591,
+          "snippet": "Премьера первого сезона американской телевизионной драмы «<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>» состоялась 20 января 2008 года. Выход новых эпизодов продолжался до 9 марта 2008",
+          "timestamp": "2026-02-15T10:14:53Z"
+        },
+        {
+          "ns": 0,
+          "title": "Во все тяжкие (5-й сезон)",
+          "pageid": 6430677,
+          "wordcount": 807,
+          "snippet": "Премьера пятого и последнего сезона американской телевизионной драмы «<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>» состоялась 15 июля 2012 года. Выход новых эпизодов продолжался до 29 сентября",
+          "timestamp": "2026-04-02T23:14:55Z"
+        },
+        {
+          "ns": 0,
+          "title": "Уолтер Уайт",
+          "pageid": 4611611,
+          "wordcount": 2252,
+          "snippet": "американского телесериала «<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>». Его роль исполнил Брайан Крэнстон. AMC не хотели принимать Крэнстона на роль <span class=\"searchmatch\">Уолтера</span>, но Винс Гиллиган настоял",
+          "timestamp": "2026-09-23T19:44:16Z"
+        },
+        {
+          "ns": 0,
+          "title": "Конец света (Во все тяжкие)",
+          "pageid": 7557517,
+          "wordcount": 596,
+          "snippet": "предпоследний эпизод четвёртого сезона американского драматического сериала «<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>», и 45-й во всём сериале. Премьера эпизода состоялась на канале AMC",
+          "timestamp": "2025-07-18T09:03:53Z"
+        },
+        {
+          "ns": 0,
+          "title": "Во все тяжкие (2-й сезон)",
+          "pageid": 3390188,
+          "wordcount": 600,
+          "snippet": "Премьера второго сезона американской телевизионной драмы «<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>» состоялась 8 марта 2009 года. Показ новых эпизодов продолжался до 31 мая 2009 года",
+          "timestamp": "2026-08-14T19:44:04Z"
+        },
+        {
+          "ns": 0,
+          "title": "Список персонажей франшизы «Во все тяжкие»",
+          "pageid": 5346886,
+          "wordcount": 13350,
+          "snippet": "американских телесериалов «<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>» и «Лучше звоните Солу», созданных Винсом Гиллиганом. Сюжет сериала «<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>» повествует о химике, который",
+          "timestamp": "2026-08-15T22:47:13Z"
+        },
+        {
+          "ns": 0,
+          "title": "El Camino",
+          "pageid": 8000015,
+          "wordcount": 2351,
+          "snippet": "мотивам сериала „<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>“» (англ. El Camino: A Breaking Bad Movie) — криминальный нео-вестерн, продолжение телесериала «<span class=\"searchmatch\">Во</span> <span class=\"searchmatch\">все</span> <span class=\"searchmatch\">тяжкие</span>». Автор сериала",
+          "timestamp": "2026-09-12T07:23:44Z"
+        }
+      ],
+      "urls": [
+        "https://ru.wikipedia.org/wiki/%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5_(3-%D0%B9_%D1%81%D0%B5%D0%B7%D0%BE%D0%BD)",
+        "https://ru.wikipedia.org/wiki/%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5",
+        "https://ru.wikipedia.org/wiki/%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5_(4-%D0%B9_%D1%81%D0%B5%D0%B7%D0%BE%D0%BD)",
+        "https://ru.wikipedia.org/wiki/%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5_(1-%D0%B9_%D1%81%D0%B5%D0%B7%D0%BE%D0%BD)",
+        "https://ru.wikipedia.org/wiki/%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5_(5-%D0%B9_%D1%81%D0%B5%D0%B7%D0%BE%D0%BD)",
+        "https://ru.wikipedia.org/wiki/%D0%A3%D0%BE%D0%BB%D1%82%D0%B5%D1%80_%D0%A3%D0%B0%D0%B9%D1%82",
+        "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D0%B5%D1%86_%D1%81%D0%B2%D0%B5%D1%82%D0%B0_(%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5)",
+        "https://ru.wikipedia.org/wiki/%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5_(2-%D0%B9_%D1%81%D0%B5%D0%B7%D0%BE%D0%BD)",
+        "https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%B6%D0%B5%D0%B9_%D1%84%D1%80%D0%B0%D0%BD%D1%88%D0%B8%D0%B7%D1%8B_%C2%AB%D0%92%D0%BE_%D0%B2%D1%81%D0%B5_%D1%82%D1%8F%D0%B6%D0%BA%D0%B8%D0%B5%C2%BB",
+        "https://ru.wikipedia.org/wiki/El_Camino"
+      ]
+    },
+    {
+      "source": "wikipedia",
+      "query": "Шерлок",
+      "target": "Шерлок (телесериал)",
+      "results": [
+        {
+          "ns": 0,
+          "title": "Шерлок Холмс",
+          "pageid": 16976,
+          "wordcount": 11207,
+          "snippet": "<span class=\"searchmatch\">Ше́рлок</span> Холмс (англ. Sherlock Holmes МФА: [ ˈʃɜː(r)lɒk ˈhəʊmz]) — литературный персонаж, частный детектив, созданный английским писателем Артуром Конаном",
+          "timestamp": "2026-09-27T12:49:18Z"
+        },
+        {
+          "ns": 0,
+          "title": "Шерлок (телесериал)",
+          "pageid": 2663245,
+          "wordcount": 12185,
+          "snippet": "«<span class=\"searchmatch\">Ше́рлок</span>», также «<span class=\"searchmatch\">Шерлок</span> Холмс» (англ. Sherlock) — британский сериал в жанре детективной криминальной драмы, основанный на произведениях Артура Конан",
+          "timestamp": "2026-08-21T12:47:53Z"
+        },
+        {
+          "ns": 0,
+          "title": "Шерлок",
+          "pageid": 4846162,
+          "wordcount": 156,
+          "snippet": "<span class=\"searchmatch\">Ше́рлок</span> — английское имя, фамилия и топоним. Может обозначать: <span class=\"searchmatch\">Шерлок</span> Холмс — персонаж ряда литературных произведений Артура Конана Дойля. «<span class=\"searchmatch\">Шерлок</span>-младший» —",
+          "timestamp": "2025-09-06T11:40:49Z"
+        },
+        {
+          "ns": 0,
+          "title": "Молодой Шерлок",
+          "pageid": 10643489,
+          "wordcount": 1024,
+          "snippet": "«Молодой <span class=\"searchmatch\">Шерлок</span>» (англ. Young Sherlock) — детективный сериал британского режиссёра Гая Ричи, экранизация серии романов Энди Лейна «Молодой <span class=\"searchmatch\">Шерлок</span> Холмс»",
+          "timestamp": "2026-09-13T21:33:41Z"
+        },
+        {
+          "ns": 0,
+          "title": "Шерлок Холмс (телесериал, 2013)",
+          "pageid": 3606208,
+          "wordcount": 1837,
+          "snippet": "«<span class=\"searchmatch\">Ше́рлок</span> Холмс» — российский детективный телесериал производства кинокомпании «Централ партнершип», снятый режиссёром Андреем Кавуном по мотивам рассказов",
+          "timestamp": "2026-03-14T11:03:37Z"
+        },
+        {
+          "ns": 0,
+          "title": "Шерлок Холмс (фильм)",
+          "pageid": 1532187,
+          "wordcount": 2479,
+          "snippet": "«<span class=\"searchmatch\">Ше́рлок</span> Хо́лмс» (англ. Sherlock Holmes) — детективный боевик Гая Ричи, в основе которого лежат произведения Артура Конана Дойла о <span class=\"searchmatch\">Шерлоке</span> Холмсе, хотя",
+          "timestamp": "2026-08-22T09:09:05Z"
+        },
+        {
+          "ns": 0,
+          "title": "Персонажи рассказов о Шерлоке Холмсе",
+          "pageid": 914835,
+          "wordcount": 2208,
+          "snippet": "Персонажи рассказов и повестей о <span class=\"searchmatch\">Шерлоке</span> Холмсе Артура Конана Дойла <span class=\"searchmatch\">Шерлок</span> Холмс (англ. Sherlock Holmes)  — главный персонаж рассказов, сыщик-консультант",
+          "timestamp": "2026-05-13T04:55:24Z"
+        },
+        {
+          "ns": 0,
+          "title": "Шерлок Холмс 3",
+          "pageid": 8083613,
+          "wordcount": 745,
+          "snippet": "информации. «<span class=\"searchmatch\">Шерлок</span> Холмс 3» (англ. Sherlock Holmes 3) — будущий детективный боевик режиссёра Декстера Флетчера, сиквел фильма «<span class=\"searchmatch\">Шерлок</span> Холмс: Игра теней»",
+          "timestamp": "2026-04-04T22:45:12Z"
+        },
+        {
+          "ns": 0,
+          "title": "Шерлок Холмс (значения)",
+          "pageid": 6205185,
+          "wordcount": 147,
+          "snippet": "<span class=\"searchmatch\">Шерлок</span> Холмс: <span class=\"searchmatch\">Шерлок</span> Холмс — литературный персонаж, созданный Артуром Конан Дойлом. <span class=\"searchmatch\">Шерлок</span> Холмс — название нескольких телесериалов. <span class=\"searchmatch\">Шерлок</span> Холмс — серия",
+          "timestamp": "2025-03-16T18:45:09Z"
+        },
+        {
+          "ns": 0,
+          "title": "Список эпизодов телесериала «Шерлок»",
+          "pageid": 3672692,
+          "wordcount": 446,
+          "snippet": "Список эпизодов британского телесериала «<span class=\"searchmatch\">Шерлок</span>». Сюжет основан на произведениях Артура Конан Дойла о <span class=\"searchmatch\">Шерлоке</span> Холмсе, но действия перенесены в наши дни",
+          "timestamp": "2026-09-10T11:57:40Z"
+        }
+      ],
+      "urls": [
+        "https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA_%D0%A5%D0%BE%D0%BB%D0%BC%D1%81",
+        "https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA_(%D1%82%D0%B5%D0%BB%D0%B5%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB)",
+        "https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA",
+        "https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B9_%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA",
+        "https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA_%D0%A5%D0%BE%D0%BB%D0%BC%D1%81_(%D1%82%D0%B5%D0%BB%D0%B5%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB,_2013)",
+        "https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA_%D0%A5%D0%BE%D0%BB%D0%BC%D1%81_(%D1%84%D0%B8%D0%BB%D1%8C%D0%BC)",
+        "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%B6%D0%B8_%D1%80%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B7%D0%BE%D0%B2_%D0%BE_%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA%D0%B5_%D0%A5%D0%BE%D0%BB%D0%BC%D1%81%D0%B5",
+        "https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA_%D0%A5%D0%BE%D0%BB%D0%BC%D1%81_3",
+        "https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA_%D0%A5%D0%BE%D0%BB%D0%BC%D1%81_(%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)",
+        "https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%8D%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%D0%BE%D0%B2_%D1%82%D0%B5%D0%BB%D0%B5%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B0_%C2%AB%D0%A8%D0%B5%D1%80%D0%BB%D0%BE%D0%BA%C2%BB"
+      ]
+    },
+    {
+      "source": "wikiquote",
+      "query": "\"Бриллиантовая рука\"",
+      "target": "Бриллиантовая рука",
+      "results": [
+        {
+          "ns": 0,
+          "title": "Бриллиантовая рука",
+          "pageid": 1019,
+          "wordcount": 60,
+          "snippet": "«<span class=\"searchmatch\">Бриллиа́нтовая</span> <span class=\"searchmatch\">рука́</span>» — советская эксцентрическая музыкальная кинокомедия, снятая в 1968 году режиссёром Леонидом Гайдаем. Виктор Николаевич, вы что,",
+          "timestamp": "2026-10-01T06:30:33Z"
+        },
+        {
+          "ns": 0,
+          "title": "Анатолий Дмитриевич Папанов",
+          "pageid": 5413,
+          "wordcount": 497,
+          "snippet": "Анато́лий Дми́триевич Папа́нов (1922—1987) — советский актёр театра и кино, театральный педагог. Народный артист СССР (1973). Единство творчества я вижу",
+          "timestamp": "2024-01-06T22:13:18Z"
+        },
+        {
+          "ns": 0,
+          "title": "Марсель",
+          "pageid": 27335,
+          "wordcount": 43,
+          "snippet": "Пожалуйста, «Стамбул — город контрастов» — какая разница — объявление перепишем! А что у вас с рукой, вы говорите? — из фильма «<span class=\"searchmatch\">Бриллиантовая</span> <span class=\"searchmatch\">рука</span>»   — диалог",
+          "timestamp": "2026-06-26T07:32:03Z"
+        },
+        {
+          "ns": 0,
+          "title": "Понедельник",
+          "pageid": 28116,
+          "wordcount": 96,
+          "snippet": "  Что они ни делают, не идут дела. Видно в понедельник их мама родила… — Песня «Остров невезения» из к/ф «<span class=\"searchmatch\">Бриллиантовая</span> <span class=\"searchmatch\">рука</span>»",
+          "timestamp": "2024-10-31T18:09:17Z"
+        },
+        {
+          "ns": 0,
+          "title": "Стамбул",
+          "pageid": 27360,
+          "wordcount": 56,
+          "snippet": " в Марселе… — Пожалуйста, «Стамбул — город контрастов» — какая разница — объявление перепишем! А что у вас с рукой, вы говорите? — <span class=\"searchmatch\">Бриллиантовая</span> <span class=\"searchmatch\">рука</span>",
+          "timestamp": "2024-02-07T09:06:49Z"
+        },
+        {
+          "ns": 0,
+          "title": "Роман Сергеевич Филиппов",
+          "pageid": 24909,
+          "wordcount": 448,
+          "snippet": "усы сбрил, дурик? (<span class=\"searchmatch\">Бриллиантовая</span> <span class=\"searchmatch\">рука</span>) Вот, будете у нас на Колыме… Будете у нас на Колыме — милости просим. (<span class=\"searchmatch\">Бриллиантовая</span> <span class=\"searchmatch\">рука</span>) Деточка, а вам не кажется",
+          "timestamp": "2026-09-15T08:56:38Z"
+        },
+        {
+          "ns": 0,
+          "title": "Шампанское",
+          "pageid": 31423,
+          "wordcount": 210,
+          "snippet": "  Шампанское по утрам пьют либо аристократы, либо дегенераты.   — «<span class=\"searchmatch\">Бриллиантовая</span> <span class=\"searchmatch\">рука</span>», 1968",
+          "timestamp": "2026-07-18T16:09:18Z"
+        },
+        {
+          "ns": 0,
+          "title": "Туалет",
+          "pageid": 48096,
+          "wordcount": 458,
+          "snippet": "фразу, произнесенную одним из персонажей знаменитого фильма 1969 г. «<span class=\"searchmatch\">Бриллиантовая</span> <span class=\"searchmatch\">рука</span>» (его играет А. Д. Папанов): «Туалет типа сортир, отмеченный буквами",
+          "timestamp": "2026-08-23T07:00:38Z"
+        },
+        {
+          "ns": 0,
+          "title": "Трын-трава",
+          "pageid": 36004,
+          "wordcount": 456,
+          "snippet": "девственница или Жанна д&#039;Арк. «Песня про зайцев» — из кинофильма «<span class=\"searchmatch\">Бриллиантовая</span> <span class=\"searchmatch\">рука</span>», самого популярного фильма советских времён, была исполнена Юрием",
+          "timestamp": "2026-07-21T05:54:45Z"
+        },
+        {
+          "ns": 0,
+          "title": "Дневной Дозор",
+          "pageid": 3178,
+          "wordcount": 21,
+          "snippet": "«Шампанское по утрам пьют либо аристократы, либо дегенераты. Так вот, любезный, на аристократа ты не похож…» — отсылка к фильму «<span class=\"searchmatch\">Бриллиантовая</span> <span class=\"searchmatch\">рука</span>»   — Эдгар",
+          "timestamp": "2022-08-29T09:13:49Z"
+        }
+      ],
+      "urls": [
+        "https://ru.wikiquote.org/wiki/%D0%91%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D1%80%D1%83%D0%BA%D0%B0",
+        "https://ru.wikiquote.org/wiki/%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%B8%D0%B9_%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B5%D0%B2%D0%B8%D1%87_%D0%9F%D0%B0%D0%BF%D0%B0%D0%BD%D0%BE%D0%B2",
+        "https://ru.wikiquote.org/wiki/%D0%9C%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D1%8C",
+        "https://ru.wikiquote.org/wiki/%D0%9F%D0%BE%D0%BD%D0%B5%D0%B4%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA",
+        "https://ru.wikiquote.org/wiki/%D0%A1%D1%82%D0%B0%D0%BC%D0%B1%D1%83%D0%BB",
+        "https://ru.wikiquote.org/wiki/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B5%D0%B2%D0%B8%D1%87_%D0%A4%D0%B8%D0%BB%D0%B8%D0%BF%D0%BF%D0%BE%D0%B2",
+        "https://ru.wikiquote.org/wiki/%D0%A8%D0%B0%D0%BC%D0%BF%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+        "https://ru.wikiquote.org/wiki/%D0%A2%D1%83%D0%B0%D0%BB%D0%B5%D1%82",
+        "https://ru.wikiquote.org/wiki/%D0%A2%D1%80%D1%8B%D0%BD-%D1%82%D1%80%D0%B0%D0%B2%D0%B0",
+        "https://ru.wikiquote.org/wiki/%D0%94%D0%BD%D0%B5%D0%B2%D0%BD%D0%BE%D0%B9_%D0%94%D0%BE%D0%B7%D0%BE%D1%80"
+      ]
+    }
+  ]
+}

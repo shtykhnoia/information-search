@@ -5,7 +5,7 @@ db:
 logic:
   delay_seconds: 1
   recrawl_seconds: 86400
-  user_agent: MAI-IR-crawler/1.0 (https://github.com/shtykhnoia/information-search)
+  user_agent: shtykhno.ilya@mail.ru
 
 sources:
   - name: wikipedia
