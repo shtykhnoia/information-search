@@ -1,19 +1,14 @@
 import argparse
 
 import yaml
-from bs4 import BeautifulSoup
 from pymongo import MongoClient
 
+if __package__:
+    from .text import extract_document
+else:
+    from text import extract_document
+
 SAMPLE_SIZE = 20
-NOISE = "script, style, table, figure, sup.reference, .mw-editsection, .reflist, .references, .navbox, .hatnote, .noprint"
-
-
-def extract_text(html):
-    content = BeautifulSoup(html, "html.parser").select_one("#mw-content-text .mw-parser-output")
-    for element in content.select(NOISE):
-        element.decompose()
-    return " ".join(content.get_text(" ").split())
-
 
 def kilobytes(size):
     return f"{size / 1024:.1f} КБ"
@@ -32,7 +27,7 @@ def main():
             name = source["name"]
             sample = list(db.documents.aggregate([{"$match": {"source": name}}, {"$sample": {"size": SAMPLE_SIZE}}]))
             html_sizes = [len(document["html"].encode()) for document in sample]
-            texts = [extract_text(document["html"]) for document in sample]
+            texts = [extract_document(document["html"])[1] for document in sample]
             text_sizes = [len(text.encode()) for text in texts]
             words = [len(text.split()) for text in texts]
 
